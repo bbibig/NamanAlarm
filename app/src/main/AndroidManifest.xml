@@ -28,6 +28,10 @@
             android:exported="false"
             />
 
+        <Service
+            android:name=".AlarmService"
+            android:enabled="true"
+            />
     </application>
 
 </manifest>
