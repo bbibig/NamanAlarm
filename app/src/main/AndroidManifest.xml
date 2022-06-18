@@ -28,7 +28,7 @@
             android:exported="false"
             />
 
-        <Service
+        <service
             android:name=".AlarmService"
             android:enabled="true"
             />

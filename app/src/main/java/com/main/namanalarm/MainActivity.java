@@ -1,13 +1,18 @@
 package com.main.namanalarm;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,16 +85,11 @@ public class MainActivity extends AppCompatActivity {
     } // stop
 
 
-        // Receiver 설정
-        Intent intent = new Intent(this, AlarmReceiver.class);
-    }
-
-
     View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.btnStart;
+                case R.id.btnStart:
                     // 알람 시작
                     start();
 
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
-    }
+    };
 
 
 
